@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: #17130F;
+    color: #E9DFCE;
+    font-family: Inter, system-ui, sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  section[id] { scroll-margin-top: 72px; }
+  ::selection { background: #A33B2D; color: #E9DFCE; }
+  :focus-visible { outline: 2px solid #B99A70; outline-offset: 3px; }
+  img { max-width: 100%; }
+}
+
+@layer components {
+  /* aged paper surface used on light sections */
+  .paper {
+    background-color: #E9DFCE;
+    background-image: url('./assets/textures/paper.svg');
+    background-blend-mode: multiply;
+  }
+  /* consistent photographic treatment: warm, slightly faded */
+  .photo { filter: sepia(.28) contrast(1.06) brightness(.9) saturate(.85); }
+  /* film grain over the whole page */
+  .grain {
+    position: fixed; inset: 0; z-index: 60; pointer-events: none;
+    opacity: .1; mix-blend-mode: overlay;
+    background-image: url('./assets/textures/grain.svg');
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
