@@ -1,15 +1,7 @@
-export type SceneKind =
-  | 'ridges' | 'plains' | 'forest' | 'camp' | 'town' | 'rider' | 'portrait' | 'swamp' | 'desert'
-
-export type Tone = 'dusk' | 'dawn' | 'night' | 'snow' | 'noon' | 'swamp' | 'desert'
-
-/** A photo slot: `src` is looked up in public/images; the procedural scene is the fallback. */
+/** A photo slot: `src` is a remote image URL resolved via `img()` in src/data/image.ts. */
 export interface ImageSlot {
   src: string
   alt: string
-  scene: SceneKind
-  tone: Tone
-  seed: number
 }
 
 export interface StoryBeat { year: string; title: string; text: string }

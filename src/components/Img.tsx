@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import type { ImageSlot } from '../types'
-import SceneArt from './SceneArt'
 
 interface Props {
   image: ImageSlot
@@ -9,8 +8,8 @@ interface Props {
 }
 
 /**
- * Renders the real photo from /public/images when it exists.
- * Until then the procedural SceneArt underneath keeps the layout complete.
+ * Renders an image loaded from the web (see src/data/image.ts).
+ * If the image can't be loaded, only the plain dark background is shown.
  * Add `group` to a parent to get the slow hover zoom.
  */
 export default function Img({ image, className = '', priority = false }: Props) {
@@ -18,8 +17,7 @@ export default function Img({ image, className = '', priority = false }: Props) 
   return (
     <div className={`relative overflow-hidden bg-ink2 ${className}`} role="img" aria-label={image.alt}>
       <div className="absolute inset-0 transition-transform duration-[1400ms] ease-out group-hover:scale-[1.06]">
-        <SceneArt kind={image.scene} tone={image.tone} seed={image.seed} className="absolute inset-0 h-full w-full" />
-        {!failed && (
+        {!failed && image.src && (
           <img
             src={image.src}
             alt=""

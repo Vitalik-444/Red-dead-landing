@@ -5,7 +5,7 @@ import Img from '../components/Img'
 import Button from '../components/Button'
 import Reveal from '../components/Reveal'
 
-const bg: ImageSlot = { src: img('hero/closing.jpg'), alt: 'A wide plain under a burning sunset', scene: 'plains', tone: 'dusk', seed: 77 }
+const bg: ImageSlot = { src: img('hero/closing.jpg'), alt: 'A wide plain under a burning sunset' }
 
 export default function Closing() {
   return (

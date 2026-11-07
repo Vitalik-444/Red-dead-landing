@@ -1,10 +1,8 @@
 /**
  * Real Red Dead Redemption 2 screenshots and official artwork.
  *
- * Images are served from iRedDead's public image CDN. The original site
- * keeps its image files on this host, so the project does not need a large
- * local image bundle. SceneArt remains as an offline fallback if a host
- * image cannot be reached.
+ * Images are loaded online from iRedDead's public image CDN, so the project
+ * does not need any local images.
  */
 const IMAGE_BASE = 'https://www.ireddead.com/content/images/'
 
@@ -57,8 +55,8 @@ const images: Record<string, string> = {
   'gallery/river-dawn.jpg': 'mount-hagen-post-card-1507.jpg',
 }
 
-/** Resolves a local image slot to a real game image. */
+/** Resolves an image slot to its online URL. */
 export const img = (path: string) => {
   const filename = images[path]
-  return filename ? `${IMAGE_BASE}${filename}` : `${import.meta.env.BASE_URL}images/${path}`
+  return filename ? `${IMAGE_BASE}${filename}` : ''
 }

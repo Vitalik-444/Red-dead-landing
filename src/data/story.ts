@@ -12,6 +12,6 @@ export const storyBeats: StoryBeat[] = [
 ]
 
 export const storyImages: { a: ImageSlot; b: ImageSlot } = {
-  a: { src: img('story/blackwater.jpg'), alt: 'A frontier town street in the 1890s', scene: 'town', tone: 'dawn', seed: 11 },
-  b: { src: img('story/camp-1899.jpg'), alt: 'Outlaw camp at the edge of the mountains', scene: 'camp', tone: 'dusk', seed: 12 },
+  a: { src: img('story/blackwater.jpg'), alt: 'A frontier town street in the 1890s' },
+  b: { src: img('story/camp-1899.jpg'), alt: 'Outlaw camp at the edge of the mountains' },
 }

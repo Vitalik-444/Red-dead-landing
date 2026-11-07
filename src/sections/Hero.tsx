@@ -7,7 +7,7 @@ import Img from '../components/Img'
 import Button from '../components/Button'
 import Stamp from '../components/Stamp'
 
-const heroImage: ImageSlot = { src: img('hero/hero.jpg'), alt: 'A lone rider on a ridge at sunset', scene: 'rider', tone: 'dusk', seed: 5 }
+const heroImage: ImageSlot = { src: img('hero/hero.jpg'), alt: 'A lone rider on a ridge at sunset' }
 const places = ['Ambarino', 'New Hanover', 'West Elizabeth', 'Lemoyne', 'New Austin']
 
 export default function Hero() {

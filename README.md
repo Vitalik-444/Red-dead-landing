@@ -57,7 +57,7 @@ Dark and paper-light sections alternate; typography, grain, thin borders and sep
 - 📓 **Journal**: asymmetric card grid with a working article modal (Esc to close, scroll lock)
 - 🖼️ **Gallery**: masonry layout with hover captions and a lightbox (arrow keys, Esc, buttons)
 - ⚙️ **Polish**: scroll progress bar, mobile menu, `prefers-reduced-motion` support, lazy-loaded images
-- 🎨 **Fallbacks**: every image slot has a procedural fallback, so the site is complete before real photos are added
+- 🖼️ **Online images**: all pictures are loaded from the web; no generated art
 
 ## 🚀 Getting Started
 
@@ -81,16 +81,16 @@ npm run build      # type-check + build into dist/
 npm run preview    # serve the production build locally
 ```
 
-## 🖼️ Adding Images
+## 🖼️ Images
 
-See [`IMAGES.md`](./IMAGES.md) for the full manifest. Place files with the listed names under `public/images/`; they replace the fallback art automatically.
+All images are loaded online. See [`IMAGES.md`](./IMAGES.md) and `src/data/image.ts` for the mapping.
 
 ## 🗂️ Project Structure
 
 ```
 src/
 ├─ assets/textures/   grain.svg, paper.svg
-├─ components/        Header, Footer, Button, SectionHeading, Img, SceneArt,
+├─ components/        Header, Footer, Button, SectionHeading, Img,
 │                     CharacterShowcase, RegionExplorer, Gallery, Lightbox,
 │                     JournalCard, ArticleModal, Reveal, Logo, Stamp
 ├─ sections/          Hero, Story, Characters, Frontier, Gang, Journal,
@@ -101,7 +101,6 @@ src/
 ├─ App.tsx · main.tsx · index.css
 public/
 ├─ logo.svg           project logo
-└─ images/            drop-in photographs (see IMAGES.md)
 ```
 
 ## 📝 Notes

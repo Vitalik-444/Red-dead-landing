@@ -2,7 +2,7 @@ import type { GangTopic, ImageSlot } from '../types'
 import { img } from './image'
 
 export const gangImage: ImageSlot = {
-  src: img('gang/campfire.jpg'), alt: 'Outlaws gathered around a campfire at night', scene: 'camp', tone: 'night', seed: 31,
+  src: img('gang/campfire.jpg'), alt: 'Outlaws gathered around a campfire at night',
 }
 
 export const gangTopics: GangTopic[] = [
